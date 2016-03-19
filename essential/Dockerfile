@@ -12,7 +12,7 @@ COPY ./etc/apt/sources.list /tmp/sources.list
 COPY ./etc/apt/apt.conf.d/02allow-unsigned /tmp/02allow-unsigned
 
 # Commands to update the image
-RUN Utilities='dos2unix wget git vim lsof' \ 
+RUN Utilities='dos2unix wget git vim lsof bzip2' \ 
         && set -x \ 
         && mv /etc/apt/sources.list /etc/apt/sources.list.bak \
         && mv tmp/sources.list /etc/apt/sources.list \
