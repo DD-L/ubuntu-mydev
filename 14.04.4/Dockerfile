@@ -20,7 +20,7 @@ RUN Utilities='dos2unix wget git vim lsof' \
         && ln -s /usr/bin/gcc-4.9 /usr/bin/gcc -f \
         && ln -s /usr/bin/gcc-4.9 /usr/bin/cc -f \
         && ln -s /usr/bin/python3 /usr/bin/python -f \
-        && apt-get install -y  --no-install-recommends \
+        && apt-get install -y $Utilities --no-install-recommends \
         && apt-get autoclean \
         && apt-get clean \
         && apt-get autoremove \
