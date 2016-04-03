@@ -10,7 +10,7 @@ MAINTAINER deel deel@d-l.top
 COPY ./etc/apt/apt.conf.d/02allow-unsigned /etc/apt/apt.conf.d/02allow-unsigned
 
 # Commands to update the image
-RUN Utilities='dos2unix wget git vim lsof' \
+RUN Utilities='dos2unix wget git vim lsof gdbserver' \
         && set -x \
         && apt-get install -y software-properties-common --no-install-recommends \
         && add-apt-repository -y ppa:ubuntu-toolchain-r/test \
