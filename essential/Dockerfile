@@ -16,8 +16,8 @@ COPY ./etc/apt/apt.conf.d/02allow-unsigned /tmp/02allow-unsigned
 RUN Utilities='dos2unix wget git vim lsof bzip2 gdbserver' \
         && set -x \ 
         && mv /etc/apt/sources.list /etc/apt/sources.list.bak \
-        && mv tmp/sources.list /etc/apt/sources.list \
-        && mv tmp/02allow-unsigned /etc/apt/apt.conf.d/02allow-unsigned \
+        && mv /tmp/sources.list /etc/apt/sources.list \
+        && mv /tmp/02allow-unsigned /etc/apt/apt.conf.d/02allow-unsigned \
         && apt-get update \
         && apt-get install -y software-properties-common --no-install-recommends \
         && add-apt-repository -y ppa:ubuntu-toolchain-r/test \
