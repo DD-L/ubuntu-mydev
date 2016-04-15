@@ -1,7 +1,8 @@
 # ubuntu-mydev
 # docker build -t="deel/ubuntu-mydev:essential" .
 # Author: Deel
-FROM docker.io/textlab/ubuntu-essential
+#FROM docker.io/textlab/ubuntu-essential
+FROM docker.io/deel/ubuntu-mydev:origin
 
 MAINTAINER deel deel@d-l.top
 
