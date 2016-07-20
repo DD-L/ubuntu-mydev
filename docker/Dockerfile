@@ -22,7 +22,7 @@ RUN Utilities='dos2unix wget git vim lsof bzip2 gdbserver' \
         && apt-get install -y software-properties-common --no-install-recommends \
         && add-apt-repository -y ppa:ubuntu-toolchain-r/test \
         && apt-get update \
-        && apt-get install -y gcc-4.9 g++-4.9 gdb make --no-install-recommends \
+        && apt-get install -y gcc-4.9 g++-4.9 gdb make cmake --no-install-recommends \
         && ln -s /usr/bin/g++-4.9 /usr/bin/g++ -f \
         && ln -s /usr/bin/gcc-4.9 /usr/bin/gcc -f \
         && ln -s /usr/bin/gcc-4.9 /usr/bin/cc -f \
